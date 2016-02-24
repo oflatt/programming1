@@ -8,4 +8,4 @@ class Food():
         self.tastiness = tastiness
 
     def deliciousnessconcentration(self):
-        return self.tastyness / self.weight
+        return self.tastiness / self.weight

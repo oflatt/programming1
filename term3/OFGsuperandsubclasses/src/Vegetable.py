@@ -8,4 +8,4 @@ class Vegetable(Food):
         self.softness = softness
 
     def chokingdanger(self):
-        self.stringyness + self.softness
+        return self.stringyness + self.softness
