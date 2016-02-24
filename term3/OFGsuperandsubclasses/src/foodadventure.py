@@ -10,14 +10,16 @@ isrunning = True
 print("welcome to the foodinator!")
 
 def myinput(s):
-    i = input(s).lower()
-    if i == "exit" or i == "stop":
-        global isrunning
-        isrunning = False
+    global isrunning
     if isrunning:
-        return i
+        i = input(s).lower()
+        if i == "exit" or i == "stop":
+            isrunning = False
+            return "2"
+        else:
+            return i
     else:
-        return "0"
+        return "2"
 
 def intput(s):
     try:
@@ -45,12 +47,9 @@ def makevegetable():
     print("The food has a deliciousness concentration of " + str(v.deliciousnessconcentration()))
     print("The vegetable has a choking hazard of " + str(v.chokingdanger()))
 
-testv = Vegetable(2, 2)
-print(str(testv.chokingdanger()))
-
 while isrunning:
     i = myinput("is the food a sandwich? ")
-    if i == "0":
+    if i == "2":
         print("see ya")
     elif i[0] == "y":
         makesandwich()
